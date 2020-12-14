@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Dash Cron</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom styles for this template -->
+  <link href="css/simple-sidebar.css" rel="stylesheet">
+  <link href="css/simple-sidebar.css" rel="stylesheet">
+  <link href="css/pages.css" rel="stylesheet">
+  <link href="css/font.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href='https://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Sarpanch&display=swap" rel="stylesheet">
+  <link rel="shortcut icon" href="images/favicon.ico">
+
+</head>
+
+<body>
+<div class="bg"></div>
+  <div class="d-flex" id="wrapper">
+
+    <!-- Sidebar. Menu Laretal -->
+    <div class="bg-re border-right" id="sidebar-wrapper">
+      <div class="sidebar-heading estext">Dash Cron</div>
+      <div class="list-group list-group-flush">
+        <a href="paginainicial.html" class="list-group-item list-group-item-action bg-re estext">Página Inicial</a>
+        <a href="listar.html" class="list-group-item list-group-item-action bg-re estext">Tabela do Cron</a>
+        <a href="agendar.html" class="list-group-item list-group-item-action bg-re estext">Agendar Tarefas</a>
+      </div>
+    </div>
+    <!-- /#sidebar-wrapper -->
+
+    <!-- Page Content -->
+    <div id="page-content-wrapper">
+
+      <!--Navebar. Conteúdo da parte de cima da página -->
+      <nav class="navbar navbar-expand-lg navbar-light bg-antique border-bottom">
+        <button class="btn btn-re" id="menu-toggle">Menu</button>
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+            <li class="nav-item active">
+              <a class="nav-link" href="paginainicial.html">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Link</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Dropdown
+              </a>
+              <div class="dropdown-menu dropdown-menu-right bg-re" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="#">Como Usar</a>
+                <a class="dropdown-item" href="#">Another action</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#">Something else here</a>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+      <!-- Conteúdo da parte de baixo da página -->
+      <div class="container-fluid">
+        
+        <!-- Card Parâmetros para alinha do crontab -->
+        <div class="card">
+          <div class="card-header font-weight-bold text-center">
+            Tabela Cron
+            <div class="float-right m-0">
+              <i class="fas fa-plus" id="createHostBtn" data-toggle="modal" data-target="#hostFormModal" onclick="loadFormCreateHost()"></i>
+            </div>
+          </div>
+          <div class="card-body">
+            <table class="table table-hosts table-hover">
+              <thead>
+                <tr>
+                  <th>Minutos</th>
+                  <th>Horas</th>
+                  <th>Dia do Mês</th>
+                  <th>Mês</th>
+                  <th>Dia da Semana</th>
+                  <th>Tarefa</th>
+                  <th>Ações</th>
+                </tr>
+              </thead>
+              <!--A ser preenchido pelo JavaScript-->
+              <tbody></tbody>
+            </table>
+          </div>
+        </div>
+
+    </div>
+    
+    <!-- /#page-content-wrapper -->
+  </div>
+  <!-- /#wrapper -->
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  
+  <script src="js/index.js" type="module"></script>
+  
+  <!-- Menu Toggle Script -->
+  <script>
+    $("#menu-toggle").click(function(e) {
+      e.preventDefault();
+      $("#wrapper").toggleClass("toggled");
+    });
+  </script>
+
+</body>
+
+</html>
