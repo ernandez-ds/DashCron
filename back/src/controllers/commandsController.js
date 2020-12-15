@@ -1,9 +1,7 @@
-const Comando = require("../utils/crontab");
+const Comando  = require("../utils/crontab");
 
-const index = (req, res) => {
-  const output = Comando.listTask();
-  const teste = {"ano": 2012};
-  console.log("listTask: "+output);
+const index = async (req, res) => {
+  const output = await Comando.listTask();
   res.json(output);
 };
 
